@@ -3,6 +3,10 @@
   position: relative;
 }
 
+.card-image {
+  height: 80%;
+}
+
 .image-container-overlay {
   width: 100%;
   height: 100%;

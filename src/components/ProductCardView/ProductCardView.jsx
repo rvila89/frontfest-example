@@ -21,9 +21,8 @@ const ProductCardView = ({ handler, id, name, title, price, image }) => {
           <img
             src={image}
             alt={title}
-            className='d-block p-2 mx-auto w-50 card-image'
+            className='d-block p-2 mx-auto w-50 h-50'
             onLoad={() => setImgLoaded(true)}
-            height='275'
           />
           {!imgLoaded && (
             <div className='image-container-overlay'>
