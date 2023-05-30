@@ -1,11 +1,9 @@
 .image-container {
-  height: 485px;
+  height: 425px;
   position: relative;
 }
 
-.card-image {
-  height: 80%;
-}
+
 
 .image-container-overlay {
   width: 100%;
