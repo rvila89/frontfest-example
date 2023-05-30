@@ -16,13 +16,14 @@ const ProductCardView = ({ handler, id, name, title, price, image }) => {
     <>
       <div className='card h-100'>
         <div className='card-body w-100 d-flex flex-column image-container'>
-          <h5 className='card-title text-uppercase'>{title}</h5>
+          <h5 className='card-title'>{title}</h5>
           <p className='card-text'>{price} €</p>
           <img
             src={image}
             alt={title}
             className='d-block p-2 mx-auto w-50 card-image'
             onLoad={() => setImgLoaded(true)}
+            height='275'
           />
           {!imgLoaded && (
             <div className='image-container-overlay'>
@@ -46,9 +47,9 @@ export default ProductCardView
 
 ProductCardView.propTypes = {
   id: PropTypes.number,
+  name: PropTypes.string,
   title: PropTypes.string,
   image: PropTypes.string,
-  description: PropTypes.string,
   price: PropTypes.number,
   handler: PropTypes.func,
 }
