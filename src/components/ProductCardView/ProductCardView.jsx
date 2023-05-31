@@ -17,18 +17,20 @@ const ProductCardView = ({ handler, id, name, title, price, image }) => {
       <div className='card h-100'>
         <div className='card-body w-100 d-flex flex-column image-container'>
           <h5 className='card-title'>{title}</h5>
-          <p className='card-text'>{price} €</p>
-          <img
-            src={image}
-            alt={title}
-            className='d-block p-2 mx-auto w-50 h-50'
-            onLoad={() => setImgLoaded(true)}
-          />
-          {!imgLoaded && (
-            <div className='image-container-overlay'>
-              <div className='spinner-border' role='status' />
-            </div>
-          )}
+          <p className='card-text mb-0'>{price} €</p>
+          <div className='d-flex flex-column h-100 justify-content-center'>
+            <img
+              src={image}
+              alt={title}
+              className='d-block p-2 mx-auto w-50'
+              onLoad={() => setImgLoaded(true)}
+            />
+            {!imgLoaded && (
+              <div className='image-container-overlay'>
+                <div className='spinner-border' role='status' />
+              </div>
+            )}
+          </div>
 
           <button
             className='btn btn-primary mt-auto'
